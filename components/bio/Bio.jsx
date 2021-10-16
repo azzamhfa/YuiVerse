@@ -12,18 +12,18 @@ import LiveTvIcon from "@mui/icons-material/LiveTv";
 import pp1 from "../../public/profile1.jpg";
 import { useState } from "react";
 import { textAlign } from "@mui/system";
-// import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 export default function Bio() {
   const [counter, setCounter] = useState(0);
   const photos = [
-    { pics: "/profile1.jpg", capt: "©Seed&Flower LLC - Nagaredama 2021" },
+    { id: 0, pics: "/profile1.jpg", capt: "©Seed&Flower LLC - Nagaredama 2021" },
     {
+      id: 1,
       pics: "https://sakurazaka101.com/wp-content/uploads/2021/03/Kobayashi.jpg",
       capt: "©Seed&Flower LLC - Ban 2021",
     },
     {
+      id: 2,
       pics: "https://sakurazaka101.com/wp-content/uploads/2021/03/KobayashiYui-scaled.jpg",
       capt: "©Seed&Flower LLC - Nobody's Fault 2020",
     },
@@ -73,7 +73,7 @@ export default function Bio() {
             }
           >
             {photos.map((data) => (
-              <div>
+              <div key={data.id}>
                 <img src={data.pics} alt={data.capt} />
                 <p>{data.capt}</p>
               </div>
