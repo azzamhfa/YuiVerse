@@ -1,26 +1,63 @@
 .discography {
-  height: calc(100vh - 60px);
+  height: calc(100vh);
+  display: flex;
+  background-size: cover;
 
-  .dropdown {
+  .left {
+    flex: 0.5;
     display: flex;
     flex-direction: column;
-    .head {
-      cursor: pointer;
-      align-items: center;
-      display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    position: relative;
+    // left: 150px;
+    background: #ffffff;
+    opacity: 0.8;
+
+    h1 {
+      font-size: 48px;
     }
-    ul {
-      display: none;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    li {
+        font-weight: 600;
+        margin-bottom: 5px;
+        margin-left: 20px;
+      font-size: 20px;
+    }
+    .content {
+      .headline {
+        margin-bottom: 30px;
+      }
+      .dropdown {
+        display: flex;
+        flex-direction: column;
+        .head {
+          cursor: pointer;
+          align-items: center;
+          display: flex;
+        }
+        ul {
+          display: none;
+        }
+      }
+
+      .active {
+        .arrow {
+          transform: rotate(-180deg);
+        }
+
+        ul {
+          display: block;
+        }
+      }
     }
   }
-
-  .active {
-    .arrow {
-      transform: rotate(-180deg);
-    }
-
-    ul {
-      display: block;
-    }
+  .right {
+    flex: 0.5;
   }
 }
