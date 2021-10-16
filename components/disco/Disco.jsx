@@ -33,7 +33,7 @@ export default function Disco() {
             }}
           >
             <div className={styles.head}>
-              <h2>1st Single - Nobody's Fault</h2>
+              <h2>1st Single - Nobody&apos;s Fault</h2>
               <ArrowDropDownIcon
                 className={styles.arrow}
                 fontSize="large"
@@ -41,7 +41,7 @@ export default function Disco() {
               />
             </div>
             <ul>
-              <li>Nobody's Fault</li>
+              <li>Nobody&apos;s Fault</li>
               <li>Naze Koi wo Shite Konakattan darou?</li>
               <li>Hanshinhangi</li>
               <li>Plastic regret </li>
