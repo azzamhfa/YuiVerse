@@ -1,6 +1,6 @@
 import Bio from "../components/bio/Bio";
 import Disco from "../components/disco/Disco";
-import Header from "../components/header/header";
+import Header from "../components/header/Header";
 import Home from "../components/home/Home";
 import styles from "../styles/Index.module.scss";
 export default function Index() {
