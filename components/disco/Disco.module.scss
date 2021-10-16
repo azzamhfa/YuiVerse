@@ -1,0 +1,26 @@
+.discography {
+  height: calc(100vh - 60px);
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    .head {
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+    }
+    ul {
+      display: none;
+    }
+  }
+
+  .active {
+    .arrow {
+      transform: rotate(-180deg);
+    }
+
+    ul {
+      display: block;
+    }
+  }
+}
