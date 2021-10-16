@@ -3,19 +3,22 @@ import styles from "./Disco.module.scss";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { style } from "@mui/system";
 export default function Disco() {
-  const [status, setStatus] = useState();
+  const [status, setStatus] = useState(0);
   const handleClick = (params) => {
-    status === params ? setStatus(params) : setStatus(0);
+    status === params ? setStatus(0) : setStatus(params);
+    console.log(status);
   };
   return (
     <div className={styles.discography}>
       <h2>DISCOGRAPHY</h2>
-      <h1>Sakurazaka46 Single Participation</h1>
+      <h1>as Sakurazaka46</h1>
       <div
         className={
-          status === 0 ? styles.dropdown : `${styles.dropdown} ${styles.active}`
+          status === 0 ?  `${styles.dropdown} ${styles.active}` : styles.dropdown
         }
-        onClick={handleClick(0)}
+        onClick={() => {
+          handleClick(0);
+        }}
       >
         <div className={styles.head}>
           <h1>1st Single - Nobody's Fault</h1>
@@ -29,17 +32,20 @@ export default function Disco() {
           <li>Nobody's Fault</li>
         </ul>
       </div>
+
       <div
         className={
-          status === 1 ? styles.dropdown : `${styles.dropdown} ${styles.active}`
+          status === 1 ?  `${styles.dropdown} ${styles.active}` : styles.dropdown
         }
-        onClick={handleClick(1)}
+        onClick={() => {
+          handleClick(1);
+        }}
         // onClick={() => {
         //   setStatus(1);
         // }}
       >
         <div className={styles.head}>
-          <h1>1st Single - Nobody's Fault</h1>
+          <h1>2nd Single - BAN</h1>
           <ArrowDropDownIcon
             className={styles.arrow}
             fontSize="large"
@@ -50,16 +56,17 @@ export default function Disco() {
           <li>Nobody's Fault</li>
         </ul>
       </div>
+
       <div
         className={
-          status === 2 ? styles.dropdown : `${styles.dropdown} ${styles.active}`
+          status === 2 ?  `${styles.dropdown} ${styles.active}` : styles.dropdown
         }
         onClick={() => {
-          setStatus(2);
+          handleClick(2);
         }}
       >
         <div className={styles.head}>
-          <h1>1st Single - Nobody's Fault</h1>
+          <h1>3rd Single - Nagaredama</h1>
           <ArrowDropDownIcon
             className={styles.arrow}
             fontSize="large"
