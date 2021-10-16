@@ -1,6 +1,5 @@
 import Bio from "../components/bio/Bio";
 import Disco from "../components/disco/Disco";
-import Disc from "../components/discography/disc";
 import Header from "../components/header/header";
 import Home from "../components/home/Home";
 import styles from "../styles/Index.module.scss";
