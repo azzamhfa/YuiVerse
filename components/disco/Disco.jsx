@@ -14,6 +14,7 @@ export default function Disco() {
     <div
       className={styles.discography}
       style={{ backgroundImage: `url(${"./banner3.png"})` }}
+      id="discography"
     >
       <div className={styles.left}>
         <div className={styles.content}>
@@ -108,7 +109,7 @@ export default function Disco() {
         </div>
       </div>
 
-      <div className={styles.right}>GAMBAR</div>
+      <div className={styles.right}></div>
     </div>
   );
 }

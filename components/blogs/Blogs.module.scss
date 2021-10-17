@@ -1,0 +1,45 @@
+@import "../../styles/global.scss";
+.blogs {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .headline {
+    flex: 0.2;
+    h1 {
+      font-size: 48px;
+      color: $mainColor;
+      text-align: center;
+    }
+  }
+  .container {
+    flex: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // align-items: center;
+    //   flex-wrap: wrap;
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      position: relative;
+      Button {
+        border-radius: 5px;
+        background-color: $mainColor;
+      }
+      img {
+        cursor: pointer;
+      }
+      h3{
+        cursor: pointer;
+      }
+      p {
+        margin-top: 10px;
+        text-align: justify;
+      }
+    }
+  }
+}

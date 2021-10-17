@@ -2,7 +2,7 @@ import styles from "./Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.home}>
+    <div className={styles.home} id="home">
       <div className={styles.left}></div>
       <div className={styles.right}>
         <div className={styles.text}>

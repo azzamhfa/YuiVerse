@@ -16,7 +16,11 @@ import { textAlign } from "@mui/system";
 export default function Bio() {
   const [counter, setCounter] = useState(0);
   const photos = [
-    { id: 0, pics: "/profile1.jpg", capt: "©Seed&Flower LLC - Nagaredama 2021" },
+    {
+      id: 0,
+      pics: "/profile1.jpg",
+      capt: "©Seed&Flower LLC - Nagaredama 2021",
+    },
     {
       id: 1,
       pics: "https://sakurazaka101.com/wp-content/uploads/2021/03/Kobayashi.jpg",
@@ -40,13 +44,14 @@ export default function Bio() {
     cursor: "pointer",
   };
   return (
-    <div className={styles.bio}>
+    <div className={styles.bio} id="bio">
       <div className={styles.left}>
         <img src={photos[counter].pics} alt="" />
         <p>{photos[counter].capt}</p>
 
         <div className={styles.gallery}>
           <h3>Gallery</h3>
+          <p>( Click to Preview )</p>
 
           <Carousel
             onClickItem={itemClicked}
@@ -130,7 +135,15 @@ export default function Bio() {
                 )
               }
             >
-              <div style={{ textAlign: "justify", paddingRight: "30px", marginRight: "30px", marginBottom: "30px"}} alt="1">
+              <div
+                style={{
+                  textAlign: "justify",
+                  paddingRight: "30px",
+                  marginRight: "30px",
+                  marginBottom: "30px",
+                }}
+                alt="1"
+              >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
                 ultricies sodales est, at feugiat massa. Vestibulum cursus
                 pellentesque leo, vitae consequat elit. Proin faucibus, massa et
@@ -144,18 +157,36 @@ export default function Bio() {
                 amet mauris. Etiam ultrices eleifend est, nec sagittis turpis
                 ornare eget.
               </div>
-              <div style={{ textAlign: "justify" }} alt="1">Ini content 2</div>
+              <div style={{ textAlign: "justify" }} alt="1">
+                Ini content 2
+              </div>
             </Carousel>
           </div>
           <div className={styles.media}>
             <h2>Media Links</h2>
-            <Button startIcon={<WebIcon />} variant="contained">
+            <Button
+              startIcon={<WebIcon />}
+              onClick={() =>
+                window.open("https://sakurazaka46.com/s/s46/artist/07?ima=4956")
+              }
+              variant="contained"
+            >
               Official Site
             </Button>
-            <Button startIcon={<TwitterIcon />} variant="contained">
+            <Button
+              startIcon={<TwitterIcon />}
+              onClick={() => window.open("https://twitter.com/yuiponpics")}
+              variant="contained"
+            >
               @yuiponpics
             </Button>
-            <Button startIcon={<LiveTvIcon />} variant="contained">
+            <Button
+              startIcon={<LiveTvIcon />}
+              onClick={() =>
+                window.open("https://www.showroom-live.com/46_YUI_KOBAYASHI")
+              }
+              variant="contained"
+            >
               showroom
             </Button>
           </div>
