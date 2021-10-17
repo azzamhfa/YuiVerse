@@ -7,7 +7,6 @@ import styles from "../styles/Index.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Disclaimer from "../components/disclaimer/Disclaimer";
-
 export async function getStaticProps(context) {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
