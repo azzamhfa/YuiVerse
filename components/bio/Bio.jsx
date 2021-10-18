@@ -43,6 +43,7 @@ export default function Bio() {
     height: 30,
     cursor: "pointer",
   };
+
   return (
     <div className={styles.bio} id="bio">
       <div className={styles.left}>
@@ -53,37 +54,46 @@ export default function Bio() {
           <h3>Gallery</h3>
           <p>( Click to Preview )</p>
 
-          <Carousel
-            onClickItem={itemClicked}
-            animationHandler="fade"
-            autoPlay={true}
-            infiniteLoop={true}
-            showStatus={false}
-            showThumbs={false}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <ArrowBackIosNewIcon
-                  onClick={onClickHandler}
-                  style={{ ...arrowStyles, left: 250 }}
-                />
-              )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <ArrowForwardIosIcon
-                  onClick={onClickHandler}
-                  style={{ ...arrowStyles, right: 250 }}
-                />
-              )
-            }
+          <div
+            className={styles.containers}
+            style={{
+              overflow: "hidden",
+            }}
           >
-            {photos.map((data) => (
-              <div key={data.id}>
-                <img src={data.pics} alt={data.capt} />
-                <p>{data.capt}</p>
-              </div>
-            ))}
-          </Carousel>
+            <Carousel
+              className={styles.carousel}
+              // width={checkSize()}
+              onClickItem={itemClicked}
+              animationHandler="fade"
+              autoPlay={true}
+              infiniteLoop={true}
+              showStatus={false}
+              showThumbs={false}
+              renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                hasPrev && (
+                  <ArrowBackIosNewIcon
+                    onClick={onClickHandler}
+                    style={{ ...arrowStyles, left: 0 }}
+                  />
+                )
+              }
+              renderArrowNext={(onClickHandler, hasNext, label) =>
+                hasNext && (
+                  <ArrowForwardIosIcon
+                    onClick={onClickHandler}
+                    style={{ ...arrowStyles, right: 0 }}
+                  />
+                )
+              }
+            >
+              {photos.map((data) => (
+                <div key={data.id}>
+                  <img src={data.pics} alt={data.capt} />
+                  <p>{data.capt}</p>
+                </div>
+              ))}
+            </Carousel>
+          </div>
         </div>
       </div>
       <div className={styles.right}>
@@ -117,8 +127,7 @@ export default function Bio() {
           <div className={styles.header}>
             <h2>Pon Fact</h2>
             <Carousel
-              width="60%"
-              animationHandler="fade"
+              className={styles.carousel}
               autoPlay={true}
               infiniteLoop={true}
               showIndicators={false}
@@ -137,10 +146,8 @@ export default function Bio() {
             >
               <div
                 style={{
+                  width: "80%",
                   textAlign: "justify",
-                  paddingRight: "30px",
-                  marginRight: "30px",
-                  marginBottom: "30px",
                 }}
                 alt="1"
               >
@@ -157,8 +164,25 @@ export default function Bio() {
                 amet mauris. Etiam ultrices eleifend est, nec sagittis turpis
                 ornare eget.
               </div>
-              <div style={{ textAlign: "justify" }} alt="1">
-                Ini content 2
+              <div
+                style={{
+                  width: "80%",
+                  textAlign: "justify",
+                }}
+                alt="1"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                ultricies sodales est, at feugiat massa. Vestibulum cursus
+                pellentesque leo, vitae consequat elit. Proin faucibus, massa et
+                suscipit interdum, dolor felis fermentum nibh, vitae lacinia
+                risus enim eu nulla. Nullam viverra dictum turpis scelerisque
+                laoreet. Nulla varius leo a lobortis scelerisque. Vestibulum a
+                risus commodo turpis venenatis blandit id quis lorem. Orci
+                varius natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Aliquam dignissim, lectus quis tincidunt
+                placerat, massa nibh vulputate risus, et pharetra justo dui sit
+                amet mauris. Etiam ultrices eleifend est, nec sagittis turpis
+                ornare eget.
               </div>
             </Carousel>
           </div>

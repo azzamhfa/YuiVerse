@@ -6,6 +6,7 @@ import { style } from "@mui/system";
 import banner3 from "../../public/banner3.png";
 export default function Disco() {
   const [status, setStatus] = useState(0);
+  const gambar = ["./banner1.png", "./banner2.png", "./banner3.png"];
   const color = ["#F95F81", "#3E7F8C", "#7E0104"];
   const handleClick = (params) => {
     status === params ? setStatus(0) : setStatus(params);
@@ -13,7 +14,7 @@ export default function Disco() {
   return (
     <div
       className={styles.discography}
-      style={{ backgroundImage: `url(${"./banner3.png"})` }}
+      style={{ backgroundImage: `url(${gambar[status]})` }}
       id="discography"
     >
       <div className={styles.left}>

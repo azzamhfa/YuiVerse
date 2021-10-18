@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import Link from "next/link";
 export default function Header() {
   return (
-    <div className={styles.header}>
+    <div className={styles.navbar}>
       <div className={styles.left}>
         <img src="/icon.png" alt="" />
         <h2>
@@ -11,7 +11,7 @@ export default function Header() {
           </Link>
         </h2>
       </div>
-      <div className={styles.right}>
+      <div className={styles.right} >
         <h3>
           <Link href="#home">
             <a>Home</a>

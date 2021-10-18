@@ -1,6 +1,6 @@
 @import "../../styles/global.scss";
 
-.header {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -10,10 +10,10 @@
   z-index: 3;
   box-shadow: 0 8px 32px 0 #f95f8077;
   color: $mainColor;
-
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   .left {
     flex: 0.5;
     display: flex;
@@ -24,7 +24,6 @@
       height: 20px;
       margin-right: 10px;
     }
-
   }
 
   .right {
@@ -34,6 +33,18 @@
 
     h3 {
       margin-right: 30px;
+    }
+  }
+}
+
+@include mobile {
+  .navbar {
+    .left {
+      // color: black;
+      flex: none;
+    }
+    .right {
+      display: none;
     }
   }
 }

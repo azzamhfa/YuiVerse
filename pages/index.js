@@ -7,7 +7,10 @@ import styles from "../styles/Index.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Disclaimer from "../components/disclaimer/Disclaimer";
-export async function getStaticProps(context) {
+import { useEffect , useState} from "react";
+
+
+export async function getServerSideProps(context) {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
   const res = await fetch("http://api-yuiverse.herokuapp.com/data");

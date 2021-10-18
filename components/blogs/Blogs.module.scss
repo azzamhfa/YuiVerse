@@ -19,26 +19,86 @@
     align-items: flex-start;
     // align-items: center;
     //   flex-wrap: wrap;
-
+    
     .card {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      // justify-content: center;
+      // align-items: center;
       margin-top: 20px;
-      position: relative;
-      Button {
-        border-radius: 5px;
-        background-color: $mainColor;
+
+      .ccard {
+        margin: 0 20px;
+        width: 300px;
+        height: 410px;
+        Button {
+          border-radius: 5px;
+          background-color: $mainColor;
+        }
+        img {
+          cursor: pointer;
+        }
+        h3 {
+          cursor: pointer;
+          font-size: 16px;
+        }
+        p {
+          margin-top: 10px;
+          text-align: justify;
+        }
       }
-      img {
-        cursor: pointer;
+      
+    }
+  }
+}
+@include mobile {
+  .blogs {
+    height: auto;
+    position: relative;
+    top: 60px;
+    padding-top: 60px;
+    width: 100vw;
+    padding-bottom: 60px;
+    .headline {
+      // flex: 0.2;
+      margin-bottom: 10px;
+      h1 {
+        font-size: 24px;
       }
-      h3{
-        cursor: pointer;
-      }
-      p {
-        margin-top: 10px;
-        text-align: justify;
+    }
+    .container {
+      flex: 0.4;
+
+      .card {
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        flex-wrap: wrap;
+
+        .ccard {
+          flex: 50%;
+          margin: 20px 0;
+          width: 250px;
+          height: 100px;
+          Button {
+            border-radius: 5px;
+            background-color: $mainColor;
+          }
+          img {
+            cursor: pointer;
+          }
+          h3 {
+            cursor: pointer;
+            font-size: 16px;
+          }
+          p {
+            margin-top: 10px;
+            text-align: justify;
+          }
+        }
+        // position: relative;
       }
     }
   }

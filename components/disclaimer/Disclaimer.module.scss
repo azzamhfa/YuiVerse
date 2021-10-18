@@ -2,7 +2,8 @@
 
 .disclaimer {
   height: 100vh;
-  top: 60px;
+  // position: relative;
+  // top: 60px;
   background-color: $mainColor;
 
   display: flex;
@@ -22,6 +23,41 @@
       font-size: 20px;
       text-align: justify;
       margin: 20px 0;
+    }
+  }
+}
+
+@include mobile {
+  .disclaimer {
+    height: 100%;
+    position: relative;
+    background-color: $mainColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 60px;
+    .container {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      position: relative;
+      color: white;
+      top: 60px;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        text-align: justify;
+        margin: 20px 0;
+      }
     }
   }
 }

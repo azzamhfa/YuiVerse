@@ -4,6 +4,7 @@
   height: calc(100vh - 60px);
   display: flex;
   height: 100vh;
+
   .left {
     flex: 0.5;
     // background: red;
@@ -29,8 +30,13 @@
       align-items: center;
       justify-content: center;
       // width: 50%;
-      h3 {
+      .containers {
+        .carousel {
+          width: 50%;
+          margin: auto;
+        }
       }
+
       p {
         margin-bottom: 10px;
         font-weight: 400;
@@ -84,6 +90,10 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+
+      .carousel {
+        width: 90%;
+      }
       h2 {
         color: $mainColor;
       }
@@ -96,6 +106,81 @@
           margin-top: 10px;
           margin-right: 10px;
           background-color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .bio {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    .left {
+      img {
+        width: 250px;
+        box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 20px 0 20px 0;
+      }
+      p {
+        font-weight: 400;
+        margin-top: 10px;
+      }
+      .gallery {
+        .containers {
+          width: 100vw;
+          .carousel {
+            width: unset;
+
+            img {
+              width: 150px;
+              box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+              border-radius: 20px 0 20px 0;
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 100vw;
+      // margin-left: 20px;
+      .content1 {
+        margin-left: 20px;
+        .headers {
+          h1 {
+            font-size: 24px;
+          }
+        }
+        .data {
+          display: grid;
+          width: 70%;
+          grid-template-columns: auto auto;
+          .datas {
+            padding-bottom: 80px;
+            h2 {
+              color: $mainColor;
+            }
+            p {
+              font-weight: 500;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .content2 {
+        width: calc(100vw - 20px);
+        margin-left: 20px;
+
+        .carousel {
+          width: 90vw;
+          margin-bottom: 10px;
         }
       }
     }
