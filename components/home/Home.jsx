@@ -8,7 +8,7 @@ export default function Home() {
         <div className={styles.text}>
           <h1>YuiVerse</h1>
           <h2>Kobayashi Yui Landing Page</h2>
-          <p>by @azzamhfa</p>          
+          <p>by @azzamhfa</p>
         </div>
       </div>
     </div>

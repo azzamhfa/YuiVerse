@@ -54,10 +54,10 @@
   .blogs {
     height: auto;
     position: relative;
-    top: 60px;
+    top: 180px;
     padding-top: 60px;
     width: 100vw;
-    padding-bottom: 60px;
+    padding-bottom: 40vh;
     .headline {
       // flex: 0.2;
       margin-bottom: 10px;
@@ -69,19 +69,17 @@
       flex: 0.4;
 
       .card {
-        // height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100vw;
-        flex-wrap: wrap;
 
         .ccard {
           flex: 50%;
           margin: 20px 0;
-          width: 250px;
-          height: 100px;
+          width: 230px;
+          height: 400px;
           Button {
             border-radius: 5px;
             background-color: $mainColor;

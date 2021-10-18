@@ -47,172 +47,164 @@ export default function Bio() {
   return (
     <div className={styles.bio} id="bio">
       <div className={styles.left}>
-        <img src={photos[counter].pics} alt="" />
-        <p>{photos[counter].capt}</p>
+        <div className={styles.container__left}>
+          <img src={photos[counter].pics} alt="" />
+          <p>{photos[counter].capt}</p>
+          <div className={styles.gallery}>
+            <h3>Gallery</h3>
+            <p>( Click to Preview )</p>
 
-        <div className={styles.gallery}>
-          <h3>Gallery</h3>
-          <p>( Click to Preview )</p>
-
-          <div
-            className={styles.containers}
-            style={{
-              overflow: "hidden",
-            }}
-          >
-            <Carousel
-              className={styles.carousel}
-              // width={checkSize()}
-              onClickItem={itemClicked}
-              animationHandler="fade"
-              autoPlay={true}
-              infiniteLoop={true}
-              showStatus={false}
-              showThumbs={false}
-              renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                hasPrev && (
-                  <ArrowBackIosNewIcon
-                    onClick={onClickHandler}
-                    style={{ ...arrowStyles, left: 0 }}
-                  />
-                )
-              }
-              renderArrowNext={(onClickHandler, hasNext, label) =>
-                hasNext && (
-                  <ArrowForwardIosIcon
-                    onClick={onClickHandler}
-                    style={{ ...arrowStyles, right: 0 }}
-                  />
-                )
-              }
+            <div
+              className={styles.containers}
+              style={{
+                overflow: "hidden",
+              }}
             >
-              {photos.map((data) => (
-                <div key={data.id}>
-                  <img src={data.pics} alt={data.capt} />
-                  <p>{data.capt}</p>
-                </div>
-              ))}
-            </Carousel>
+              <Carousel
+                className={styles.carousel}
+                // width={checkSize()}
+                onClickItem={itemClicked}
+                animationHandler="fade"
+                showIndicators={false}
+                autoPlay={true}
+                infiniteLoop={true}
+                showStatus={false}
+                showThumbs={false}
+                renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                  hasPrev && (
+                    <ArrowBackIosNewIcon
+                      onClick={onClickHandler}
+                      style={{ ...arrowStyles, left: 0 }}
+                    />
+                  )
+                }
+                renderArrowNext={(onClickHandler, hasNext, label) =>
+                  hasNext && (
+                    <ArrowForwardIosIcon
+                      onClick={onClickHandler}
+                      style={{ ...arrowStyles, right: 0 }}
+                    />
+                  )
+                }
+              >
+                {photos.map((data) => (
+                  <div key={data.id}>
+                    <img src={data.pics} alt={data.capt} />
+                    <p>{data.capt}</p>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>
+
       <div className={styles.right}>
-        <div className={styles.content1}>
-          <div className={styles.headers}>
-            <h2>BIOGRAPHY</h2>
-            <h1>Kobayashi Yui | 小林 由依</h1>
+        <div className={styles.container__right}>
+          <div className={styles.content1}>
+            <div className={styles.headers}>
+              <h2>BIOGRAPHY</h2>
+              <h1>Kobayashi Yui | 小林 由依</h1>
+            </div>
+
+            <div className={styles.data}>
+              <div className={styles.datas}>
+                <h2>Birthdate</h2>
+                <p>October 23, 1999</p>
+              </div>
+              <div className={styles.datas}>
+                <h2>Height</h2>
+                <p>161 cm </p>
+              </div>
+              <div className={styles.datas}>
+                <h2>Birthplace</h2>
+                <p>Saitama Perfecture </p>
+              </div>
+              <div className={styles.datas}>
+                <h2>Bloodtype</h2>
+                <p>A </p>
+              </div>
+            </div>
           </div>
 
-          <div className={styles.data}>
-            <div className={styles.datas}>
-              <h2>Birthdate</h2>
-              <p>October 23, 1999</p>
-            </div>
-            <div className={styles.datas}>
-              <h2>Height</h2>
-              <p>161 cm </p>
-            </div>
-            <div className={styles.datas}>
-              <h2>Birthplace</h2>
-              <p>Saitama Perfecture </p>
-            </div>
-            <div className={styles.datas}>
-              <h2>Bloodtype</h2>
-              <p>A </p>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.content2}>
-          <div className={styles.header}>
-            <h2>Pon Fact</h2>
-            <Carousel
-              className={styles.carousel}
-              autoPlay={true}
-              infiniteLoop={true}
-              showIndicators={false}
-              showStatus={false}
-              showThumbs={false}
-              // showArrows={false}
-              renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev}
-              renderArrowNext={(onClickHandler, hasNext, label) =>
-                hasNext && (
-                  <ArrowForwardIosIcon
-                    onClick={onClickHandler}
-                    style={{ ...arrowStyles, right: 0 }}
-                  />
-                )
-              }
-            >
-              <div
-                style={{
-                  width: "80%",
-                  textAlign: "justify",
-                }}
-                alt="1"
+          <div className={styles.content2}>
+            <div className={styles.header}>
+              <h2>Pon Fact</h2>
+              <Carousel
+                className={styles.carousel}
+                autoPlay={true}
+                infiniteLoop={true}
+                showIndicators={false}
+                showStatus={false}
+                showThumbs={false}
+                // showArrows={false}
+                renderArrowPrev={(onClickHandler, hasPrev, label) => hasPrev}
+                renderArrowNext={(onClickHandler, hasNext, label) =>
+                  hasNext && (
+                    <ArrowForwardIosIcon
+                      onClick={onClickHandler}
+                      style={{ ...arrowStyles, right: 0 }}
+                    />
+                  )
+                }
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ultricies sodales est, at feugiat massa. Vestibulum cursus
-                pellentesque leo, vitae consequat elit. Proin faucibus, massa et
-                suscipit interdum, dolor felis fermentum nibh, vitae lacinia
-                risus enim eu nulla. Nullam viverra dictum turpis scelerisque
-                laoreet. Nulla varius leo a lobortis scelerisque. Vestibulum a
-                risus commodo turpis venenatis blandit id quis lorem. Orci
-                varius natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Aliquam dignissim, lectus quis tincidunt
-                placerat, massa nibh vulputate risus, et pharetra justo dui sit
-                amet mauris. Etiam ultrices eleifend est, nec sagittis turpis
-                ornare eget.
-              </div>
-              <div
-                style={{
-                  width: "80%",
-                  textAlign: "justify",
-                }}
-                alt="1"
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  ultricies sodales est, at feugiat massa. Vestibulum cursus
+                  pellentesque leo, vitae consequat elit. Proin faucibus, massa
+                  et suscipit interdum
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                  ultricies sodales est, at feugiat massa. Vestibulum cursus
+                  pellentesque leo, vitae consequat elit. Proin faucibus, massa
+                  et suscipit interdum, dolor felis fermentum nibh, vitae
+                  lacinia risus enim eu nulla. 
+                </div>
+              </Carousel>
+            </div>
+            <div className={styles.media}>
+              <h2>Media Links</h2>
+              <Button
+                startIcon={<WebIcon />}
+                onClick={() =>
+                  window.open(
+                    "https://sakurazaka46.com/s/s46/artist/07?ima=4956"
+                  )
+                }
+                variant="contained"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                ultricies sodales est, at feugiat massa. Vestibulum cursus
-                pellentesque leo, vitae consequat elit. Proin faucibus, massa et
-                suscipit interdum, dolor felis fermentum nibh, vitae lacinia
-                risus enim eu nulla. Nullam viverra dictum turpis scelerisque
-                laoreet. Nulla varius leo a lobortis scelerisque. Vestibulum a
-                risus commodo turpis venenatis blandit id quis lorem. Orci
-                varius natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Aliquam dignissim, lectus quis tincidunt
-                placerat, massa nibh vulputate risus, et pharetra justo dui sit
-                amet mauris. Etiam ultrices eleifend est, nec sagittis turpis
-                ornare eget.
-              </div>
-            </Carousel>
-          </div>
-          <div className={styles.media}>
-            <h2>Media Links</h2>
-            <Button
-              startIcon={<WebIcon />}
-              onClick={() =>
-                window.open("https://sakurazaka46.com/s/s46/artist/07?ima=4956")
-              }
-              variant="contained"
-            >
-              Official Site
-            </Button>
-            <Button
-              startIcon={<TwitterIcon />}
-              onClick={() => window.open("https://twitter.com/yuiponpics")}
-              variant="contained"
-            >
-              @yuiponpics
-            </Button>
-            <Button
-              startIcon={<LiveTvIcon />}
-              onClick={() =>
-                window.open("https://www.showroom-live.com/46_YUI_KOBAYASHI")
-              }
-              variant="contained"
-            >
-              showroom
-            </Button>
+                Official Site
+              </Button>
+              <Button
+                startIcon={<TwitterIcon />}
+                onClick={() => window.open("https://twitter.com/yuiponpics")}
+                variant="contained"
+              >
+                @yuiponpics
+              </Button>
+              <Button
+                startIcon={<LiveTvIcon />}
+                onClick={() =>
+                  window.open("https://www.showroom-live.com/46_YUI_KOBAYASHI")
+                }
+                variant="contained"
+              >
+                showroom
+              </Button>
+            </div>
           </div>
         </div>
       </div>

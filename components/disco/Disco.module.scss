@@ -69,10 +69,10 @@
 
 @include mobile {
   .discography {
-    background-image: none;
+    // background-image: none;
     height: auto;
     position: relative;
-    top: 60px;
+    top: 180px;
     .left {
       flex: none;
       // padding: 20px;

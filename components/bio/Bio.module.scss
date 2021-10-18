@@ -1,111 +1,244 @@
 @import "../../styles/global.scss";
 
 .bio {
-  height: calc(100vh - 60px);
   display: flex;
   height: 100vh;
-
   .left {
-    flex: 0.5;
-    // background: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 300px;
-      box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
-
-      border-radius: 20px 0 20px 0;
-    }
-
-    p {
-      font-weight: 500;
-    }
-
-    .gallery {
-      margin-top: 40px;
+    flex: 30%;
+    .container__left {
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      // width: 50%;
-      .containers {
-        .carousel {
-          width: 50%;
-          margin: auto;
-        }
+      align-items: center;
+      height: 100vh;
+      img {
+        width: 300px;
+        box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 20px 0 20px 0;
+      }
+      p {
+        font-weight: 500;
       }
 
-      p {
-        margin-bottom: 10px;
-        font-weight: 400;
-        font-size: 12px;
-      }
-      img {
-        // margin-top: 20px;
-        box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
-        width: 200px;
-        border-radius: 0;
+      .gallery {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // width: 50%;
+        .containers {
+          .carousel {
+            width: 50%;
+            margin: auto;
+          }
+        }
+
+        p {
+          margin-bottom: 10px;
+          font-weight: 400;
+          font-size: 12px;
+        }
+        img {
+          // margin-top: 20px;
+          box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+          width: 200px;
+          border-radius: 0;
+        }
       }
     }
   }
 
+  // ATI2
   .right {
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex: 50%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     // justify-content: space-around;
     // align-items: center;
-    .content1 {
-      flex: 0.33;
-      .headers {
-        h2 {
-          color: $mainColor;
-          // font-size: 36px;
+    .container__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      .content1 {
+        flex: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .headers {
+          h2 {
+            color: $mainColor;
+            font-size: 36px;
+          }
+        }
+        .data {
+          display: grid;
+          width: 70%;
+          grid-template-columns: auto auto;
+          grid-template-rows: auto auto;
+          .datas {
+            h2 {
+              color: $mainColor;
+            }
+            p {
+              padding-bottom: 30px;
+
+              font-weight: 500;
+              font-size: 24px;
+            }
+          }
+          //   justify-content: center;
+          //   justify-content: space-around;
         }
       }
-      .data {
-        display: grid;
-        width: 70%;
-        grid-template-columns: auto auto;
-        .datas {
-          padding-bottom: 80px;
+
+      .content2 {
+        flex: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .carousel {
+          width: 90%;
+        }
+        h2 {
+          color: $mainColor;
+        }
+
+        p {
+          font-size: 24px;
+        }
+        .media {
+          Button {
+            margin-top: 10px;
+            margin-right: 10px;
+            background-color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sz768 {
+  .bio {
+    height: 100vh;
+    .left {
+      flex: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .container__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+        position: relative;
+        top: 60px;
+
+        img {
+          width: 250px;
+          box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+
+          border-radius: 20px 0 20px 0;
+        }
+
+        p {
+          font-weight: 500;
+        }
+
+        .gallery {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          // width: 50%;
+          .containers {
+            .carousel {
+              width: 50%;
+              margin: auto;
+            }
+          }
+
+          p {
+            margin-bottom: 10px;
+            font-weight: 400;
+            font-size: 12px;
+          }
+          img {
+            // margin-top: 20px;
+            box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+            width: 150px;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+    .right {
+      flex: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .container__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90%;
+        .content1 {
+          flex: 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 60%;
+
+          .headers {
+            h2 {
+              color: $mainColor;
+              font-size: 24px;
+            }
+          }
+          .data {
+            display: grid;
+            width: 70%;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            .datas {
+              h2 {
+                color: $mainColor;
+              }
+              p {
+                font-weight: 500;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        .content2 {
+          flex: 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          .carousel {
+            width: 90%;
+          }
           h2 {
             color: $mainColor;
           }
+
           p {
-            font-weight: 500;
-            font-size: 24px;
+            font-size: 18px;
           }
-        }
-        //   justify-content: center;
-        //   justify-content: space-around;
-      }
-    }
-
-    .content2 {
-      flex: 0.4;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-
-      .carousel {
-        width: 90%;
-      }
-      h2 {
-        color: $mainColor;
-      }
-
-      p {
-        font-size: 24px;
-      }
-      .media {
-        Button {
-          margin-top: 10px;
-          margin-right: 10px;
-          background-color: $mainColor;
+          .media {
+            Button {
+              margin-top: 10px;
+              margin-right: 10px;
+              background-color: $mainColor;
+            }
+          }
         }
       }
     }
@@ -116,31 +249,39 @@
   .bio {
     width: 100vw;
     height: auto;
-    position: relative;
-    top: 60px;
-    padding-bottom: 60px;
+    // top: 60px;
     display: flex;
     flex-direction: column;
     .left {
-      img {
-        width: 250px;
-        box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
-        border-radius: 20px 0 20px 0;
-      }
-      p {
-        font-weight: 400;
-        margin-top: 10px;
-      }
-      .gallery {
-        .containers {
-          width: 100vw;
-          .carousel {
-            width: unset;
+      flex: 30%;
+      margin-top: 20px;
+      .container__left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 0;
+        img {
+          width: 150px;
+          box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+          border-radius: 20px 0 20px 0;
+        }
+        p {
+          font-weight: 400;
+          margin-top: 10px;
+        }
+        .gallery {
+          margin-top: unset;
+          .containers {
+            width: 100vw;
+            .carousel {
+              width: unset;
 
-            img {
-              width: 150px;
-              box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
-              border-radius: 20px 0 20px 0;
+              img {
+                width: 120px;
+                box-shadow: 4px 4px 25px 1px rgba(0, 0, 0, 0.25);
+                border-radius: 20px 0 20px 0;
+              }
             }
           }
         }
@@ -148,39 +289,48 @@
     }
 
     .right {
+      flex: 30%;
       width: 100vw;
-      // margin-left: 20px;
-      .content1 {
-        margin-left: 20px;
-        .headers {
-          h1 {
-            font-size: 24px;
-          }
-        }
-        .data {
-          display: grid;
-          width: 70%;
-          grid-template-columns: auto auto;
-          .datas {
-            padding-bottom: 80px;
-            h2 {
-              color: $mainColor;
-            }
-            p {
-              font-weight: 500;
-              font-size: 18px;
+      height: 100vh;
+      margin-top: 40px;
+      .container__right {
+        display: flex;
+        justify-content: flex-start;
+        height: 80vh;
+        .content1 {
+          margin-left: 20px;
+          .headers {
+            h1 {
+              font-size: 24px;
             }
           }
+          .data {
+            display: grid;
+            width: 70%;
+            grid-template-columns: auto auto;
+            grid-column-gap: 20px;
+            .datas {
+              h2 {
+                color: $mainColor;
+                font-size: 18px;
+              }
+              p {
+                font-weight: normal;
+                font-size: 13px;
+              }
+            }
+          }
         }
-      }
 
-      .content2 {
-        width: calc(100vw - 20px);
-        margin-left: 20px;
+        .content2 {
+          width: calc(100vw - 20px);
+          margin-left: 20px;
+          .carousel {
+            width: 90vw;
+            margin-bottom: 10px;
 
-        .carousel {
-          width: 90vw;
-          margin-bottom: 10px;
+            font-size: 14px;
+          }
         }
       }
     }
