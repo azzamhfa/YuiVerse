@@ -10,7 +10,7 @@ import Disclaimer from "../components/disclaimer/Disclaimer";
 import { useEffect , useState} from "react";
 
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
   const res = await fetch("http://api-yuiverse.herokuapp.com/data");

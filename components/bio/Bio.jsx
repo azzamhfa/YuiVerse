@@ -155,10 +155,7 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  ultricies sodales est, at feugiat massa. Vestibulum cursus
-                  pellentesque leo, vitae consequat elit. Proin faucibus, massa
-                  et suscipit interdum
+                  Because of her sadistic character on stage, especially during performances of Abunakkashii Keikaku, so she is sometimes called "Mad Dog (狂犬)".
                 </div>
                 <div
                   style={{
@@ -167,11 +164,16 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  ultricies sodales est, at feugiat massa. Vestibulum cursus
-                  pellentesque leo, vitae consequat elit. Proin faucibus, massa
-                  et suscipit interdum, dolor felis fermentum nibh, vitae
-                  lacinia risus enim eu nulla. 
+                  Besides her sadistic character on stage, when off stage she is unexpectedly clingy
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  Besides her sadistic character on stage, when off stage she is unexpectedly clingy
                 </div>
               </Carousel>
             </div>
