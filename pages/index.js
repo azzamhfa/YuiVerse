@@ -11,12 +11,10 @@ import { useEffect , useState} from "react";
 
 
 export async function getStaticProps(context) {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
+  
   const res = await fetch("http://api-yuiverse.herokuapp.com/data");
   const posts = await res.json();
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+  
   return {
     props: {
       posts,

@@ -155,7 +155,7 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  Because of her sadistic character on stage, especially during performances of Abunakkashii Keikaku, so she is sometimes called "Mad Dog (狂犬)".
+                  Because of her sadistic character on stage, especially during performances of Abunakkashii Keikaku, so she is sometimes called &quotMad Dog (狂犬)&quot.
                 </div>
                 <div
                   style={{
@@ -173,7 +173,7 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  Besides her sadistic character on stage, when off stage she is unexpectedly clingy
+                  
                 </div>
               </Carousel>
             </div>
