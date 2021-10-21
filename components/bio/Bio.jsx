@@ -173,7 +173,7 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  
+                  Test
                 </div>
               </Carousel>
             </div>
