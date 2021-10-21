@@ -176,7 +176,25 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  Test
+                  Test 2
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  Test 3
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  Test 4
                 </div>
               </Carousel>
             </div>

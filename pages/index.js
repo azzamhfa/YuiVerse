@@ -1,4 +1,4 @@
-import Bio from "../components/bio/Bio";
+import Bio from "../components/biograph/Bio";
 import Blogs from "../components/blogs/Blogs";
 import Disco from "../components/disco/Disco";
 import Header from "../components/header/Header";
