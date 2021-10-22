@@ -50,7 +50,7 @@ export default function Bio() {
         <div className={styles.container__left}>
           <img src={photos[counter].pics} alt="" />
           <p>{photos[counter].capt}</p>
-          <div className={styles.gallery}>
+          {/* <div className={styles.gallery}>
             <h3>Gallery</h3>
             <p>( Click to Preview )</p>
 
@@ -95,7 +95,7 @@ export default function Bio() {
                 ))}
               </Carousel>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -157,7 +157,7 @@ export default function Bio() {
                 >
                   Because of her sadistic character on stage, especially during
                   performances of Abunakkashii Keikaku, so she is sometimes
-                  called &quotMad Dog (狂犬)&quot.
+                  called &quot;Mad Dog (狂犬)&quot;.
                 </div>
                 <div
                   style={{
@@ -168,33 +168,6 @@ export default function Bio() {
                 >
                   Besides her sadistic character on stage, when off stage she is
                   unexpectedly clingy
-                </div>
-                <div
-                  style={{
-                    width: "80%",
-                    textAlign: "justify",
-                  }}
-                  alt="1"
-                >
-                  Test 2
-                </div>
-                <div
-                  style={{
-                    width: "80%",
-                    textAlign: "justify",
-                  }}
-                  alt="1"
-                >
-                  Test 3
-                </div>
-                <div
-                  style={{
-                    width: "80%",
-                    textAlign: "justify",
-                  }}
-                  alt="1"
-                >
-                  Test 4
                 </div>
               </Carousel>
             </div>
