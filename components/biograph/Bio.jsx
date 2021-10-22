@@ -60,40 +60,6 @@ export default function Bio() {
                 overflow: "hidden",
               }}
             >
-              {/* <Carousel
-                className={styles.carousel}
-                // width={checkSize()}
-                onClickItem={itemClicked}
-                animationHandler="fade"
-                showIndicators={false}
-                autoPlay={true}
-                infiniteLoop={true}
-                showStatus={false}
-                showThumbs={false}
-                renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                  hasPrev && (
-                    <ArrowBackIosNewIcon
-                      onClick={onClickHandler}
-                      style={{ ...arrowStyles, left: 0 }}
-                    />
-                  )
-                }
-                renderArrowNext={(onClickHandler, hasNext, label) =>
-                  hasNext && (
-                    <ArrowForwardIosIcon
-                      onClick={onClickHandler}
-                      style={{ ...arrowStyles, right: 0 }}
-                    />
-                  )
-                }
-              >
-                {photos.map((data) => (
-                  <div key={data.id}>
-                    <img src={data.pics} alt={data.capt} />
-                    <p>{data.capt}</p>
-                  </div>
-                ))}
-              </Carousel> */}
               {photos.map((data) => (
                 <div
                   key={data.id}
@@ -168,8 +134,8 @@ export default function Bio() {
                   alt="1"
                 >
                   Because of her sadistic character on stage, especially during
-                  performances of Abunakkashii Keikaku, so she is sometimes
-                  called &quot;Mad Dog (狂犬)&quot;.
+                  performances of Abunakkashii Keikaku, She is sometimes called
+                  &quot;Mad Dog (狂犬)&quot;.
                 </div>
                 <div
                   style={{
@@ -188,7 +154,8 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  She is currently taking a hiatus from group since September 9, 2021.
+                  She is currently taking a hiatus from the group since
+                  September 9, 2021.
                 </div>
                 <div
                   style={{
@@ -197,7 +164,7 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  She never skipped for every events and concerts without taking
+                  She never skipped for any events and concerts without taking a
                   long break, except for Sakurazaka46 3rd Single - Nagaredama.
                 </div>
                 <div
@@ -207,10 +174,9 @@ export default function Bio() {
                   }}
                   alt="1"
                 >
-                  She also like dramas so much. She would check out almost all
+                  Because she loves dramas. She would often check out almost all
                   the dramas every season.
                 </div>
-                
               </Carousel>
             </div>
             <div className={styles.media}>
