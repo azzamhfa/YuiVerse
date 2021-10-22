@@ -50,7 +50,7 @@ export default function Bio() {
         <div className={styles.container__left}>
           <img src={photos[counter].pics} alt="" />
           <p>{photos[counter].capt}</p>
-          {/* <div className={styles.gallery}>
+          <div className={styles.gallery}>
             <h3>Gallery</h3>
             <p>( Click to Preview )</p>
 
@@ -60,7 +60,7 @@ export default function Bio() {
                 overflow: "hidden",
               }}
             >
-              <Carousel
+              {/* <Carousel
                 className={styles.carousel}
                 // width={checkSize()}
                 onClickItem={itemClicked}
@@ -93,9 +93,21 @@ export default function Bio() {
                     <p>{data.capt}</p>
                   </div>
                 ))}
-              </Carousel>
+              </Carousel> */}
+              {photos.map((data) => (
+                <div
+                  key={data.id}
+                  className={styles.pics}
+                  onClick={() => {
+                    itemClicked(data.id);
+                  }}
+                >
+                  <img src={data.pics} alt={data.capt} />
+                  <p>{data.capt}</p>
+                </div>
+              ))}
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
 
