@@ -181,6 +181,36 @@ export default function Bio() {
                   Besides her sadistic character on stage, when off stage she is
                   unexpectedly clingy
                 </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  She is currently taking a hiatus from group since September 9, 2021.
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  She never skipped for every events and concerts without taking
+                  long break, except for Sakurazaka46 3rd Single - Nagaredama.
+                </div>
+                <div
+                  style={{
+                    width: "80%",
+                    textAlign: "justify",
+                  }}
+                  alt="1"
+                >
+                  She also like dramas so much. She would check out almost all
+                  the dramas every season.
+                </div>
+                
               </Carousel>
             </div>
             <div className={styles.media}>

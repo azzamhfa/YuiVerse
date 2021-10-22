@@ -78,6 +78,7 @@ export default function Disco() {
               <li>Kimi to Boku to Sentakumono </li>
               <li>Microscope</li>
               <li>Omotta Yori mo Sabishikunai </li>
+              <li>Sakurazaka no Uta </li>
             </ul>
           </div>
 

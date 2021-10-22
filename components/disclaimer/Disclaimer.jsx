@@ -18,7 +18,7 @@ export default function Disclaimer() {
           </p>
           <p>
             All Contents has Credits from Sakurazaka46’s Official Website,
-            Seed&Flower LLC, Sakuzaka Central, Sakurazka46’ Official Youtube and
+            Seed&Flower LLC, Sakuzaka Central, Sakurazaka46 Official Youtube, WeStillSubbing and
             @yuiponpics (twitter). If there’s a problem with credits, feel free
             to DM me via Twitter @azzamhfa
           </p>
